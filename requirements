@@ -1,0 +1,5 @@
+Modules needed
+opencv
+imageio
+shutil
+Pillow
