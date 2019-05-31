@@ -4,7 +4,7 @@ import imageio
 from PIL import Image, GifImagePlugin
 
 
-def extractFrames(gif, outFolder):
+def getFrames(gif, outFolder):
     files = os.listdir(".")
     if gif+"_custom_speed" in files:
         os.remove(gif+"_custom_speed")
@@ -35,7 +35,7 @@ def custom_speed(gif, image_folder, dur):
 
 
 s = input("file name: ")
-dur = input("duration of each frame (in seconds): ")
-extractFrames(s, s+'_frames')
+dur = input("duration of each frame (.01 fastest): ")
+getFrames(s, s+'_frames')
 custom_speed(s, s+'_frames', dur)
 
